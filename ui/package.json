@@ -1,0 +1,35 @@
+{
+  "name": "gitlite-ui",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.17.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 1420",
+    "dev:e2e": "vite --host 127.0.0.1 --port 4173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "vitest": "vitest run",
+    "test:e2e": "playwright test --grep-invert @perf",
+    "test:e2e:perf": "playwright test --grep @perf --reporter=line,json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@sveltejs/vite-plugin-svelte": "^4.0.4",
+    "@testing-library/svelte": "^5.2.6",
+    "autoprefixer": "^10.4.21",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.5.1",
+    "svelte": "^5.20.1",
+    "svelte-check": "^4.1.1",
+    "svelte-dnd-action": "^0.9.69",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.12",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "lucide-svelte": "^0.564.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "gitlite-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.17.0",
+  "scripts": {
+    "ui:install": "pnpm --dir ui install",
+    "ui:dev": "pnpm --dir ui dev",
+    "ui:check": "pnpm --dir ui check",
+    "ui:test": "pnpm --dir ui vitest",
+    "ui:e2e": "pnpm --dir ui test:e2e",
+    "ui:e2e:perf": "pnpm --dir ui test:e2e:perf",
+    "tauri:dev": "sh -c 'cd src-tauri && cargo tauri dev'",
+    "tauri:test": "sh -c 'cd src-tauri && cargo test -q'",
+    "tauri:check": "sh -c 'cd src-tauri && cargo fmt --check && cargo clippy --all-targets --all-features -- -D warnings && cargo test -q'",
+    "check": "pnpm run ui:check && pnpm run ui:test && pnpm run tauri:test",
+    "check:all": "pnpm run ui:check && pnpm run ui:test && pnpm run ui:e2e && pnpm run tauri:check"
+  }
+}

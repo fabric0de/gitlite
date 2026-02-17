@@ -1,0 +1,105 @@
+:root {
+  /* Typography */
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Pretendard Variable", "Pretendard",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  
+  /* Metrics */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Animation */
+  --transition-fast: 150ms cubic-bezier(0.2, 0.0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.2, 0.0, 0.2, 1);
+}
+
+html[data-theme='dark'] {
+  /* Base Backgrounds */
+  --bg-canvas: #161618;
+  --bg-surface: #1e1e20;
+  --bg-sidebar: #1a1a1c;
+  
+  /* Glass & Overlays */
+  --bg-glass: rgba(30, 30, 32, 0.7);
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.08);
+  --bg-selected: rgba(71, 145, 255, 0.15);
+
+  /* Text */
+  --text-strong: #ededed;
+  --text-normal: #d4d4d4;
+  --text-muted: #a1a1a1;
+  --text-soft: #737373;
+  --text-on-accent: #ffffff;
+
+  /* Borders */
+  --line-soft: rgba(255, 255, 255, 0.06);
+  --line-medium: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.15);
+
+  /* Accents */
+  --accent: #4791ff;
+  --accent-hover: #5d9fff;
+  
+  /* Graph/Status Colors (Oklch inspired approximations) */
+  --lane-1: #5ea1ff;
+  --lane-2: #4fd1c5;
+  --lane-3: #f6ad55;
+  --lane-4: #b794f4;
+  --lane-5: #fc8181;
+  --lane-6: #63b3ed;
+  
+  --success: #38a169;
+  --warning: #d69e2e;
+  --error: #e53e3e;
+}
+
+html[data-theme='light'] {
+  /* Base Backgrounds */
+  --bg-canvas: #ffffff;
+  --bg-surface: #f7f8fa;
+  --bg-sidebar: #f2f3f5;
+  
+  /* Glass & Overlays */
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.06);
+  --bg-selected: rgba(45, 116, 229, 0.1);
+
+  /* Text */
+  --text-strong: #171717;
+  --text-normal: #262626;
+  --text-muted: #525252;
+  --text-soft: #8a8a8a;
+  --text-on-accent: #ffffff;
+
+  /* Borders */
+  --line-soft: rgba(0, 0, 0, 0.05);
+  --line-medium: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.12);
+
+  /* Accents */
+  --accent: #2d74e5;
+  --accent-hover: #3b82f6;
+
+  /* Graph/Status Colors */
+  --lane-1: #2563eb;
+  --lane-2: #059669;
+  --lane-3: #d97706;
+  --lane-4: #7c3aed;
+  --lane-5: #dc2626;
+  --lane-6: #0891b2;
+
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+}

@@ -1,0 +1,43 @@
+name: UI Performance Trend
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+jobs:
+  ui-perf:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ui
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.17.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run UI perf suite
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=test-results/perf-playwright-report.json pnpm test:e2e:perf
+
+      - name: Upload perf artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-perf-${{ github.run_id }}
+          path: |
+            ui/test-results/perf-metrics.json
+            ui/test-results/perf-playwright-report.json

@@ -1,0 +1,23 @@
+.DS_Store
+.idea/
+.vscode/
+
+# Rust / Cargo
+target/
+src-tauri/target/
+**/*.rs.bk
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs / cache
+*.log
+node_modules/
+dist/
+playwright-report/
+test-results/
+coverage/
+ui/.vite/
+src-tauri/gen/

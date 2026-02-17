@@ -1,0 +1,30 @@
+name: UI proposal
+about: Suggest UI direction for future UI phases
+title: "ui: "
+labels: ["ui-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The repository is currently backend-first.
+        UI proposals are welcome and tracked for a later implementation phase.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected impact
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
