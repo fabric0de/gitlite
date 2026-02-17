@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "src-tauri": {
+      "release-type": "rust",
+      "package-name": "gitlite",
+      "include-v-in-tag": true
+    }
+  }
+}
